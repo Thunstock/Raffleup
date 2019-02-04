@@ -1,28 +1,26 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { Switch, Route } from "react-router-dom";
+// import Raffle from "./Components/Raffle";
+import Home from "./Components/Home";
+// import About from "./Components/About";
+import ReactGA from "react-ga";
+import NavBar from "./Components/NavBar";
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
+function App() {
+  if (process.env.REACT_APP_GA_TRACKING_ID) {
+    ReactGA.initialize(process.env.REACT_APP_GA_TRACKING_ID);
   }
+
+  return (
+    <div className="App">
+      <NavBar />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        {/* <Route path="/raffle" component={Raffle} />
+        <Route path="/about" component={About} /> */}
+      </Switch>
+    </div>
+  );
 }
 
 export default App;

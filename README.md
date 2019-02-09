@@ -1,5 +1,10 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
+This repository contains the Raffleup source code. Raffleup is a tool that allows you to choose a random winner from a meetup.com event. It should be useful for Meetup organizers doing raffles and giveaways.
+
+
+
 ## Available Scripts
 
 In the project directory, you can run:

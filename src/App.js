@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+import React from "react";
 import { Switch, Route } from "react-router-dom";
-// import Raffle from "./Components/Raffle";
+import Raffle from "./Components/Raffle";
 import Home from "./Components/Home";
 import About from "./Components/About";
 import ReactGA from "react-ga";
@@ -16,7 +16,7 @@ function App() {
       <NavBar />
       <Switch>
         <Route exact path="/" component={Home} />
-        {/* <Route path="/raffle" component={Raffle} /> */}
+        <Route path="/raffle" component={Raffle} />
         <Route path="/about" component={About} />
       </Switch>
     </div>

@@ -1,20 +1,20 @@
-import React, { Component } from "react";
+import React from "react";
 import Footer from "./Footer";
 import ReactGA from "react-ga";
 
 function Home() {
-  const CONSUMER_KEY = process.env.REACT_APP_API_KEY;
+  const CONSUMER_KEY = "4vjc5vj5vi1e6stse71d92aga3";
 
-  const CONSUMER_REDIRECT_URI = process.env.REACT_APP_REDIRECT_URI;
+  const CONSUMER_REDIRECT_URI = "http://127.0.0.1:3001/Raffle";
 
   const url = `https://secure.meetup.com/oauth2/authorize?client_id=${CONSUMER_KEY}&response_type=token&redirect_uri=${CONSUMER_REDIRECT_URI}`;
 
   if (process.env.REACT_APP_GA_TRACKING_ID) {
-    React.GA.pageview("/");
+    ReactGA.pageview("/");
   }
 
   const trackingClick = event => {
-    React.GA.event({
+    ReactGA.event({
       category: "User",
       action: "Authentication MeetUp"
     });
@@ -28,10 +28,11 @@ function Home() {
             <div className="intro-heading text-uppercase">
               MEETUP RAFFLES AND GIVEAWAYS
             </div>
+
             <a
+              className="btn btn-primary btn-xl text-uppercase js-scroll-trigger"
               href={url}
               onClick={trackingClick}
-              className="btn btn-primary btn-xl text-uppercase js-scroll-trigger"
             >
               START
             </a>

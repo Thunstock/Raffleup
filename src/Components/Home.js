@@ -5,7 +5,7 @@ import ReactGA from 'react-ga';
 function Home() {
 	const CONSUMER_KEY = '4vjc5vj5vi1e6stse71d92aga3';
 
-	const CONSUMER_REDIRECT_URI = 'http://127.0.0.1:3000/raffle';
+	const CONSUMER_REDIRECT_URI = 'https://raffleup.azurewebsites.net/raffle';
 
 	const url = `https://secure.meetup.com/oauth2/authorize?client_id=${CONSUMER_KEY}&response_type=token&redirect_uri=${CONSUMER_REDIRECT_URI}`;
 

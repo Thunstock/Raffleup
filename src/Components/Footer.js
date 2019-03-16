@@ -19,7 +19,7 @@ function Footer() {
 								</a>
 							</li>
 							<li className="list-inline-item">
-								<a href="https://www.linkedin.com/">
+								<a href="https://www.linkedin.com/in/tyler-hunstock-85ba38179/">
 									<i className="fab fa-linkedin-in" />
 								</a>
 							</li>
